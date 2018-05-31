@@ -1,17 +1,24 @@
-<div id="body">Einen Moment bitte, Sie werden weitergeleitet.</div>
-<script type="text/javascript">
-  window.onload = function() {
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){  
-      if(xmlhttp.readyState == 4 && xmlhttp.status == 200){   
-        window.location.href = "https://zarat.ml";
-      } else if(xmlhttp.readyState == 4 && xmlhttp.status == 0) {
-        window.location.href = "https://wiki.zarat.ml";
-      } else {
-        //window.location.href = "https://wiki.zarat.ml";
+<html>
+  <head>
+    <title>zarat.ml</title>
+  </head>
+  <body>
+    <div id="body">Einen Moment bitte, Sie werden weitergeleitet.</div>
+    <script type="text/javascript">
+      window.onload = function() {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){  
+          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){   
+            window.location.href = "https://zarat.ml";
+          } else if(xmlhttp.readyState == 4 && xmlhttp.status == 0) {
+            window.location.href = "https://wiki.zarat.ml";
+          } else {
+            //window.location.href = "https://wiki.zarat.ml";
+          }
+        }
+        xmlhttp.open("GET","https://zarat.ml",true);
+        xmlhttp.send();
       }
-    }
-    xmlhttp.open("GET","https://zarat.ml",true);
-    xmlhttp.send();
-  }
-</script>
+    </script>
+  </body>
+</html>
