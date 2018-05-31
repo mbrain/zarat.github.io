@@ -14,7 +14,6 @@ build one from scratch to learn something. This post talks about this experience
 and this blog where you are is the result.
 
 <button class="mdc-button">
-  <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
   Button
 </button>
 
