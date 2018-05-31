@@ -2,6 +2,7 @@
 layout: post
 title:  "My new github page"
 description: Using GitHub and Jekyll.
+category: test
 permalink: /blog/my-new-github-page
 ---
 ![My new github page image](/assets/images/posts/2015-01-03-how-i-made-my-blog-with-github-jekyll-and-material-design/github_jekyll_materialdesign.jpg)
