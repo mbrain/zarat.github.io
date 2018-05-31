@@ -7,6 +7,13 @@ tags: homepage programm
 published: true
 ---
 
+<span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  {% endfor %}
+]</span>
+
 Beim Responsive Webdesign wird das Layout einer Website mit Hilfe von HTML und CSS so gestaltet, dass es auf Desktop, Tablet und Smartphone eine optimale Benutzerfreundlichkeit bietet.
 
 Der Begriff Responsive Webdesign bedeutet soviel wie „reagierendes Webdesign“. Elemente sowie der strukturelle Aufbau der Website passen sich dabei interaktiv der Bildschirmauflösung des jeweiligen Endgeräts an.
