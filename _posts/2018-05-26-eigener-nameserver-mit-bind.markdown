@@ -1,8 +1,9 @@
 ---
+layout: post
 title: Eigener Nameserver mit Bind
 author: Manuel Zarat
-layout: post
 category: tutorials
+tags: [software,protokoll]
 permalink: /blog/eigener-nameserver-mit-bind
 ---
 
