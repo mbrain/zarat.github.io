@@ -1,3 +1,2 @@
 User-agent: *
-Sitemap: https://manuelzarat.ml/sitemap.xml
-Disallow:
+Disallow: /
