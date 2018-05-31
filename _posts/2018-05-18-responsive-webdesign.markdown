@@ -3,6 +3,7 @@ layout: post
 title: Responsive Webdesign
 author: Manuel Zarat
 category: webdesign
+tags: [homepage,programm]
 published: true
 ---
 
