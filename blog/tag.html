@@ -3,11 +3,6 @@ layout: default
 title: Tag
 ---
 
-{% comment %}
-=======================
-The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
-=======================
-{% endcomment %}
 {% assign rawtags = "" %}
 {% for post in site.posts %}
 	{% assign tags = post.tags | join:'|' | append:'|' %}
@@ -15,11 +10,6 @@ The following part extracts all the tags from your posts and sort tags, so that 
 {% endfor %}
 {% assign rawtags = rawtags | split:'|' | sort %}
 
-{% comment %}
-=======================
-The following part removes dulpicated tags and invalid tags like blank tag.
-=======================
-{% endcomment %}
 {% assign tags = "" %}
 {% for tag in rawtags %}
 	{% if tag != "" %}
