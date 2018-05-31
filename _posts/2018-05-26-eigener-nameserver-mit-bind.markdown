@@ -16,6 +16,8 @@ db.0      db.local    named.conf          zones.rfc1918
 db.127    db.root     named.conf.local    rndc.key   
 db.255    db.empty    named.conf.options
 
+<!--excerpt_separator-->
+
 In den Dateien, die mit named. beginnen, wird die allgemeine Funktion des Servers konfiguriert. Die db.-Dateien sind dagegen die Zonendateien, in denen die eigentlichen DNS Daten abgelegt werden.
 
 Wenn nur IPv4 verwendet wird, sollte der Paramter „-4″ in /etc/default/bind9 unter OPTIONS=“…“ hinzugefügt werden. Dies steigert die Performance drastisch.
