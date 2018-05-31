@@ -3,10 +3,10 @@
   window.onload = function() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){  
-      if(xmlhttp.readyState == 4){   
+      if(xmlhttp.readyState == 4 && xmlhttp.status == 200){   
         document.getElementById('body').innerHTML = xmlhttp.responseText;
       } else {
-        alert(xmlhttp.readyState);
+        console.log("Server seems offline");
       }
     }
     xmlhttp.open("GET","https://zarat.ml",true);
