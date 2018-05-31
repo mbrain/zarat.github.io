@@ -44,12 +44,12 @@ Beim Einbinden von Produktbildern sollte unbedingt auf die Auflösung des jeweil
 
 Um dem Interpreter mitzuteilen welche Regeln angewendet werden, werden besagte Media Queries genutzt.
 
-<pre><me <!--strip --> ta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<li <!--strip --> nk rel="stylesheet" href="style.css" /></pre>
+<pre><me<!--strip -->ta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<li<!--strip -->nk rel="stylesheet" href="style.css" /></pre>
 
 Es gibt jedoch auch die Möglichkeit die Regeln bereits im HTML Header festzulegen. Bei großen Stylesheets wo 3 verschiedene Darstellungsoptionen definiert werden, spart es Resourcen, die 3 Styles in eigene Dateien zu verfrachten und je nach Anforderung nur die jeweilige Datei zu laden.
 
-<pre><link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 460px)' href='special.css' /></pre>
+<pre><li<!--strip -->nk rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 460px)' href='special.css' /></pre>
 
 Studien zum Absatz mobiler Geräte belegen eine stetige Zunahme bei Tablets und Smartphones. Fast täglich werden neue Entwicklungen und Technologien präsentiert und auch die Fachpresse überschlägt sich regelrecht. Sollten Sie gerade vor einem Desktop sitzen, können Sie die Größe des Browserfensters ändern und dabei beobachten, wie die Website darauf reagiert.
 
