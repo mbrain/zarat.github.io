@@ -4,4 +4,4 @@ title: "Tag: homepage"
 tag: homepage
 ---
 
-<h1>Homepage</h1>
+Eine Homepage hat heute doch schon jeder.
