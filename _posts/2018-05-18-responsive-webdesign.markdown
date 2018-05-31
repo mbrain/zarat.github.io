@@ -10,6 +10,8 @@ Beim Responsive Webdesign wird das Layout einer Website mit Hilfe von HTML und C
 
 Der Begriff Responsive Webdesign bedeutet soviel wie „reagierendes Webdesign“. Elemente sowie der strukturelle Aufbau der Website passen sich dabei interaktiv der Bildschirmauflösung des jeweiligen Endgeräts an.
 
+<!--excerpt_separator-->
+
 Hier gilt es bereits in der konzeptionellen Ausarbeitungsphase die inhaltliche Struktur für die verschiedenen Auflösungen zu bestimmen. Unter Umständen sollen nicht alle Inhalte, die auf dem Desktop angezeigt werden, auch auf dem Smartphones zu sehen sein. Denken Sie an die verfügbare Bandbreite und das teilweise limitierte Datenvolumen von mobilen Endgeräten. Darauf sollte bei der Erstellung von Beginn an geachtet werden, um die Datenlast so gering wie möglich zu halten.
 
 Für Smartphones gelten dabei 320 bis 480px, für Tablets 768 bis 1024px und Desktops besitzen in der Regel eine Auflösung von 1024px+
