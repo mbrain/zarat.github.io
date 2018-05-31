@@ -25,6 +25,7 @@ github_username: zarat
 
 # set true to include or false to exclude share option
 share:
+  facebook: false
   twitter: false
   google_plus: false
   linkedin: false
