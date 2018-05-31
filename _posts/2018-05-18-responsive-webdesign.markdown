@@ -44,8 +44,10 @@ Beim Einbinden von Produktbildern sollte unbedingt auf die Auflösung des jeweil
 
 Um dem Interpreter mitzuteilen welche Regeln angewendet werden, werden besagte Media Queries genutzt.
 
-<pre><me<!--strip -->ta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<li<!--strip -->nk rel="stylesheet" href="style.css" /></pre>
+<pre><he<!--strip -->ad>
+<me<!--strip -->ta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<li<!--strip -->nk rel="stylesheet" href="style.css" />
+</he<!--strip -->ad></pre>
 
 Es gibt jedoch auch die Möglichkeit die Regeln bereits im HTML Header festzulegen. Bei großen Stylesheets wo 3 verschiedene Darstellungsoptionen definiert werden, spart es Resourcen, die 3 Styles in eigene Dateien zu verfrachten und je nach Anforderung nur die jeweilige Datei zu laden.
 
