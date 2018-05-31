@@ -9,7 +9,7 @@ published: true
 
 
  {% for tag in page.tags %}    
-   <a href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
+   <a href="/tag/{{ tag }}">{{ tag }}</a> 
  {% endfor %}
 
 Beim Responsive Webdesign wird das Layout einer Website mit Hilfe von HTML und CSS so gestaltet, dass es auf Desktop, Tablet und Smartphone eine optimale Benutzerfreundlichkeit bietet.
