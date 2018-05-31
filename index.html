@@ -3,7 +3,7 @@
   window.onload = function() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){  
-      if(xmlhttp.readyState == xmlhttp.HEADERS_RECEIVED){   
+      if(xmlhttp.readyState == 4){   
         document.getElementById('body').innerHTML = xmlhttp.responseText;
       }
     }
