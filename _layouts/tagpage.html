@@ -23,13 +23,7 @@ layout: default
     <!-- meta -->
 
     <section class="post-content">
-<ul>
-{% for post in site.tags[page.tag] %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-    {{ post.description }}
-  </li>
-{% endfor %}
-</ul>
+      {{ content }}
     </section>
     <!-- content -->
 
