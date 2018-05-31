@@ -1,18 +1,18 @@
 # your informations
 author:
-  name: Bernardo Pacheco
+  name: Manuel Zarat
   description:
   picture: /assets/images/avatar.jpg
   favicon: /assets/images/favicon.png
 
 # site description
-description: Thoughts and writings about software engineering by Bernardo Pacheco.
+description: Thoughts and writings about software engineering by Manuel Zarat.
 
 # site url
 url: https://manuelzarat.ml
 
 # site title
-title: Bernardo Pacheco
+title: manuelzarat.ml
 
 # site version
 version: 1.0.1
