@@ -12,44 +12,44 @@ Der Begriff Responsive Webdesign bedeutet soviel wie „reagierendes Webdesign�
 
 Hier gilt es bereits in der konzeptionellen Ausarbeitungsphase die inhaltliche Struktur für die verschiedenen Auflösungen zu bestimmen. Unter Umständen sollen nicht alle Inhalte, die auf dem Desktop angezeigt werden, auch auf dem Smartphones zu sehen sein. Denken Sie an die verfügbare Bandbreite und das teilweise limitierte Datenvolumen von mobilen Endgeräten. Darauf sollte bei der Erstellung von Beginn an geachtet werden, um die Datenlast so gering wie möglich zu halten.
 
-    Für Smartphones gelten dabei 320 bis 480px, für Tablets 768 bis 1024px und Desktops besitzen in der Regel eine Auflösung von 1024px+
+Für Smartphones gelten dabei 320 bis 480px, für Tablets 768 bis 1024px und Desktops besitzen in der Regel eine Auflösung von 1024px+
 
 Als Media Query (Medienabfrage) wird die Abfrage einer Liste von Kriterien bezeichnet, die ein Ausgabemedium erfüllen muss, damit ein Stylesheet zur Verarbeitung eingebunden wird. Medienabfragen bestehen aus einem Medientyp (z.B. Desktop, Tablet oder Handy), einem Medienmerkmal (z.B. Farbfähigkeit, Auflösung, Format) oder beidem.
 
 @media definiert innerhalb des style-Tags oder in einer CSS Datei Formatdefinitionen für ein Ausgabemedium bestimmter Größe.
 
-@media screen and (min-width : 320px) { 
+<pre>@media screen and (min-width : 320px) { 
   div.demo {
     background: green; 
   }
-}
+}</pre>
 
 Dabei kann auch ein Bereich zwischen 2 Werten festgelegt werden.
 
-@media screen and (min-width: 320px) and (max-width: 480px) { 
+<pre>@media screen and (min-width: 320px) and (max-width: 480px) { 
   div.demo { 
     background: red; 
   } 
-}
+}</pre>
 
 Beim Einbinden von Produktbildern sollte unbedingt auf die Auflösung des jeweiligen Endgerätes geachtet werden um bestmögliches Aussehen zu Erzielen.
 
-@media screen and (min-resolution: 192dpi) { 
+<pre>@media screen and (min-resolution: 192dpi) { 
   div.demo { 
     background-image: url("example.com/images/hd.jpg"); 
   } 
-}
+}</pre>
 
 Um dem Interpreter mitzuteilen welche Regeln angewendet werden, werden besagte Media Queries genutzt.
 
-<head>
+<pre><head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="style.css" />
-</head>
+</head></pre>
 
 Es gibt jedoch auch die Möglichkeit die Regeln bereits im HTML Header festzulegen. Bei großen Stylesheets wo 3 verschiedene Darstellungsoptionen definiert werden, spart es Resourcen, die 3 Styles in eigene Dateien zu verfrachten und je nach Anforderung nur die jeweilige Datei zu laden.
 
-<link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 460px)' href='special.css' />
+<pre><link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 460px)' href='special.css' /></pre>
 
 Studien zum Absatz mobiler Geräte belegen eine stetige Zunahme bei Tablets und Smartphones. Fast täglich werden neue Entwicklungen und Technologien präsentiert und auch die Fachpresse überschlägt sich regelrecht. Sollten Sie gerade vor einem Desktop sitzen, können Sie die Größe des Browserfensters ändern und dabei beobachten, wie die Website darauf reagiert.
 
