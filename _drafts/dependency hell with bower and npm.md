@@ -4,26 +4,106 @@ author: Bernardo Pacheco
 layout: post
 ---
 
-Esse artigo trata do problema que encontramos com dependências no bower e no npm.
+BIND ist ein von der Universität Berkeley (USA) entwickelter (Open Source) DNS Server und wurde auf fast jedes Betriebssystem portiert. Bis heute gilt BIND als „die Referenz“ unter den DNS Servern und bildet den Grundstock des heutigen Internets. Inzwischen wurde die Entwicklung des BIND Servers vom herstellerunabhängigen Internet Systems Consortium (ISC) übernommen. Bind (aktuell Bind9) läßt sich mit APT installieren. Bringen Sie Ihr System davor auf den neuesten Stand um Konflikte zu vermeiden.
 
-O problema ocorre quando vc faz um bower install e/ou npm install. Tudo instala numa boa, mas quando vc vai rodar um projeto que estava funcionando há algumas semanas atrás, tudo quebra. Por quê?
+apt-get install bind9
 
-O motivo é que no bower.json ou no package.json nós controlamos apenas as dependências diretas que a nossa aplicação precisa. Porém, nós não controlamos as dependências de nossas dependências. Logo, uma dependência de uma dependência direta pode mudar a sua versão sem que saibamos e o código quebra por algum motivo.
+Der Dienst wird zunächst gestopt. Die Konfiguration erfolgt über das Verzeichnis /etc/bind worin sich jetzt folgende Dateien befinden sollten:
 
-Como corrigir?
-Bower e npm tem as suas particularidades com dependências, cada um se comporta de uma forma diferente.
-Para o bower, como estamos tratando de scripts que serão executados no browser, isso implica que somente uma versão de um determinado script será executado. Não é possível executar no browser duas ou mais versões do angular ou jquery. Por outro lado, no npm isso é possível, pois o ambiente de execução não é o browser, mas sim o node.js. No npm, as dependências não são horizontais, ou seja, cada biblioteca guarda internamete as suas dependências. Logo, é possível que A dependa de B v1.0 e C dependa de B v2.3. Aqui não há conflito pq cada lib mantém de forma isolada as suas dependências.
+db.0      db.local    named.conf          zones.rfc1918
+db.127    db.root     named.conf.local    rndc.key   
+db.255    db.empty    named.conf.options
 
-Para corrigir no bower, o ideal é 'marretar' a versão de cada lib que é carregada no browser. Isso quer dizer para marretar a versão das libs utilziadas diretamente e as dependências dessas libs. Por exemplo, se eu dependo apenas do twitter bootstrap, que por sua vez tem uma dependência para o jquery, eu poderia colocar no bower.json apenas a dependência e versão para o bootstrap, mas o ideal é também colocar a versão do jquery mesmo que o mesmo não seja utilizado diretamente pela aplicação.
+In den Dateien, die mit named. beginnen, wird die allgemeine Funktion des Servers konfiguriert. Die db.-Dateien sind dagegen die Zonendateien, in denen die eigentlichen DNS Daten abgelegt werden.
 
-Para corrigir no npm, o ideal é versionar toda a pasta do npm_modules no repositório.
-Para essa solução do npm, tem um artigo e thread boa aqui:
+Wenn nur IPv4 verwendet wird, sollte der Paramter „-4″ in /etc/default/bind9 unter OPTIONS=“…“ hinzugefügt werden. Dies steigert die Performance drastisch.
 
-Olhar o e-mail com o subject 'node_modules in git' no e-mail corporativo.
-http://www.futurealoof.com/posts/apache-considered-harmful.html
-Procurar pelo artigo 'node_modules in git'
+Es müssen mindestens zwei neue db.-Dateien erstellt werden. Eine Datei mit dem Namen db.domainname für die Forwardlookup-Zone und eine Datei db.z.y.x für die Reverselookup-Zone. Das Wort „domainname“ im Dateinamen ist gegen die entsprechende Domäne zu ersetzen, „z.y.x“ durch die ersten 3 Oktette der IP adresse in umgekehrter Reihenfolge.
+Globale Kofiguration
 
+In die Datei named.conf wird die globale (systemweite) Konfiguration geschrieben.
 
-Lembrar de que, tanto no bower quanto no npm, evitar de utilizar a sintaxe de versionamento.
-In a nutshell, the syntax for this is defined by the semver parser within Node. You can see the syntax details in the readme for semver.
-https://github.com/npm/node-semver
+options {
+    directory "/var/named";
+    pid-file "/var/run/named/named.pid";
+    auth-nxdomain yes; // no
+    datasize default;
+    // Uncomment these to enable IPv6 connections support
+    // IPv4 will still work:
+    //  listen-on-v6 { any; };
+    // Add this for no IPv4:
+    //  listen-on { none; };
+
+    // Default security settings.
+    allow-recursion { 127.0.0.1; };
+    allow-transfer { none; };
+    allow-update { none; };
+    version none;
+    hostname none;
+    server-id none;
+};
+
+Zusätzlich muss noch jede von dieser Zone verwaltete IP/Domain mit der zugehörigen Konfigurationsdatei eingetragen werden
+
+zone "zarat.ml" {
+    type master;
+    file "/etc/bind/db.zarat.ml";
+};
+
+zone "0.248.216.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.248.216.91";
+};
+
+Die hier eingetragenen Zonendateien gibt es aber noch nicht und werden jetzt unter /etc/bind angelegt.
+Forward Lookup Zone
+
+Die Forward Lookup Zone ist dazu da, Domainnamen in IP Adressen umzuwandeln.
+
+$TTL 2D
+@       IN      SOA     zarat.ml. (
+                        1234567890      ; Serial
+                                8H      ; Refresh
+                                2H      ; Retry
+                                4W      ; Expire
+                                3H )    ; NX (TTL Negativ Cache)
+
+@	3600	IN	NS	ns.zarat.ml.
+@	3600	IN	A	91.216.248.12
+
+ns      3600    IN      A       91.216.248.12
+wiki    3600    IN      A       91.216.248.12
+
+Besonders wichtig an dieser Stelle ist eine Leerzeile am Ende der Datei!
+Reverse Lookup Zone
+
+Die Reverse Lookup Zone ist hingegen dazu da, IP Adressen in Domainnamen umzuwandeln. Diese wird allerdings
+
+    rückwärts gelesen
+    und nur die ersten 3 Oktette
+
+Bei einer IP
+
+91.216.248.12
+
+wäre der Dateiname also
+
+db.248.216.91
+
+und der entsprechende Inhalt
+
+$TTL 2D
+@       IN      SOA     zarat.ml. (
+                                1234567890      ; Serial
+                                        8H      ; Refresh
+                                        2H      ; Retry
+                                        4W      ; Expire
+                                        2D )    ; TTL Negative Cache
+
+@       IN      NS      zarat.ml.
+
+12      IN      PTR     zarat.ml.
+12      IN      PTR     wiki.zarat.ml.
+
+ 
+Mehr zu DNS finden Sie in meinem WIKI.
