@@ -6,7 +6,9 @@ category: tutorials
 permalink: /blog/eigener-nameserver-mit-bind
 ---
 
-BIND ist ein von der Universität Berkeley (USA) entwickelter (Open Source) DNS Server und wurde auf fast jedes Betriebssystem portiert. Bis heute gilt BIND als „die Referenz“ unter den DNS Servern und bildet den Grundstock des heutigen Internets. Inzwischen wurde die Entwicklung des BIND Servers vom herstellerunabhängigen Internet Systems Consortium (ISC) übernommen. Bind (aktuell Bind9) läßt sich mit APT installieren. Bringen Sie Ihr System davor auf den neuesten Stand um Konflikte zu vermeiden.
+BIND ist ein von der Universität Berkeley (USA) entwickelter (Open Source) DNS Server und wurde auf fast jedes Betriebssystem portiert. Bis heute gilt BIND als „die Referenz“ unter den DNS Servern und bildet den Grundstock des heutigen Internets. Inzwischen wurde die Entwicklung des BIND Servers vom herstellerunabhängigen Internet Systems Consortium (ISC) übernommen. 
+<!--excerpt_separator-->
+Bind (aktuell Bind9) läßt sich mit APT installieren. Bringen Sie Ihr System davor auf den neuesten Stand um Konflikte zu vermeiden.
 
 <pre>apt-get install bind9</pre>
 
@@ -15,8 +17,6 @@ Der Dienst wird zunächst gestopt. Die Konfiguration erfolgt über das Verzeichn
 <pre>db.0      db.local    named.conf          zones.rfc1918
 db.127    db.root     named.conf.local    rndc.key   
 db.255    db.empty    named.conf.options</pre>
-
-<!--excerpt_separator-->
 
 In den Dateien, die mit named. beginnen, wird die allgemeine Funktion des Servers konfiguriert. Die db.-Dateien sind dagegen die Zonendateien, in denen die eigentlichen DNS Daten abgelegt werden.
 
