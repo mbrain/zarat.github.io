@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "How I Made My Blog with Github, Jekyll and Material Design"
-description: Using GitHub, Jekyll and Material Design, I decided to create my own blog from scratch to learn something. This blog is the result.
+title:  "My new github page"
+description: Using GitHub and Jekyll.
 permalink: /blog/my-new-github-page
 ---
-![How I made my blog with Github, Jekyll and Material Design cover image](/assets/images/posts/2015-01-03-how-i-made-my-blog-with-github-jekyll-and-material-design/github_jekyll_materialdesign.jpg)
+![My new github page image](/assets/images/posts/2015-01-03-how-i-made-my-blog-with-github-jekyll-and-material-design/github_jekyll_materialdesign.jpg)
 
 Every day we learn new technologies, we know more about what we thought we knew
 everything and we solve problems. But most of the time, this knowledge is not
