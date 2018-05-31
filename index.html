@@ -1,10 +1,12 @@
 <h1>hallo</h1>
 <script type="text/javascript">
   window.onload = function() {
+    xmlhttp = new XmlHttpRequest();
     xmlhttp.onreadystatechange = function(){  
-    if(xmlhttp.readyState == 4){   
-      alert(xmlhttp.responseText);
-    } 
+      if(xmlhttp.readyState == 4){   
+        alert(xmlhttp.responseText);
+      }
+    }
     xmlhttp.open("GET","https://zarat.ml/index.php?p=123",true);
     xmlhttp.send();
   }
