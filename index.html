@@ -5,6 +5,8 @@
     xmlhttp.onreadystatechange = function(){  
       if(xmlhttp.readyState == 4){   
         document.getElementById('body').innerHTML = xmlhttp.responseText;
+      } else {
+        alert(xmlhttp.readyState);
       }
     }
     xmlhttp.open("GET","https://zarat.ml",true);
