@@ -13,6 +13,11 @@ I decided (finally) to create my blog. I decided not to use a out of the box blo
 build one from scratch to learn something. This post talks about this experience
 and this blog where you are is the result.
 
+<button class="mdc-button">
+  <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+  Button
+</button>
+
 <!--excerpt_separator-->
 
 ## Hosting from GitHub
