@@ -8,9 +8,8 @@ published: true
 ---
 
 <span>
-  {% for tag in page.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="/tag/{{ tag_name }}">{{ tag_name }}&nbsp;</a>
+  {% for tag in page.tags %}    
+    <a href="/tag/{{ tag_name }}">{{ tag }}</a>&nbsp;
   {% endfor %}
 </span>
 
