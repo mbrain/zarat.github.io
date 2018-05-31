@@ -4,7 +4,7 @@
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){  
       if(xmlhttp.readyState == 4 && xmlhttp.status == 200){   
-        document.getElementById('body').innerHTML = xmlhttp.responseText;
+        window.location.href = "https://zarat.ml";
       } else {
         console.log("Server seems offline");
       }
