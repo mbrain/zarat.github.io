@@ -1,7 +1,8 @@
 ---
-title: Dependency hell with Bower and npm
-author: Bernardo Pacheco
+title: Eigener Nameserver mit Bind
+author: Manuel Zarat
 layout: post
+category: tutorials
 permalink: /blog/eigener-nameserver-mit-bind
 ---
 
