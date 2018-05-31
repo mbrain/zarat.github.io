@@ -2,7 +2,7 @@
 layout: post
 title:  "A Simple Javascript Library Design"
 description: When building a JavaScript library, you may find yourself on some code architecture issues. A library should have a well-defined public interface and protect itself from a carelessly programmer. In this post, I’m going to build a super simple library to illustrate some code designs.
-permalink: /a-simple-javascript-library-design
+permalink: /blog/a-simple-javascript-library-design
 ---
 
 When building a JavaScript library, you may find yourself on some code architecture issues. Should I use a constructor function, maybe with a prototype inheritance, isolating in a module or a mix of all of this? A library should have a well-defined public interface and protect itself from a carelessly programmer. In this post, I'm going to build a super simple library to illustrate some code designs.
