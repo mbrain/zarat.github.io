@@ -34,15 +34,8 @@ layout: default
     </footer>
 
   </article>
-
-</section>
-
-<hr>
-
-<div class="post">
   
-<h1>Tag: {{ page.tag }}</h1>
-  
+<p>mehr zu {{ page.tag }}</p>  
 <ul>
 {% for post in site.tags[page.tag] %}
   <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
@@ -50,5 +43,6 @@ layout: default
   </li>
 {% endfor %}
 </ul>
-  
-</div>
+
+</section>
+
