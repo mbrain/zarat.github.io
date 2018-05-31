@@ -6,16 +6,16 @@ author:
   favicon: /assets/images/favicon.png
 
 # site description
-description: Thoughts and writings about software engineering by Manuel Zarat.
+description: 
 
 # site url
-url: https://zarat.github.io
+url: https://zarat.ml
 
 # site title
-title: manuelzarat.ml
+title: zarat.ml
 
 # site version
-version: 1.0.1
+version: 1.0
 
 # number of posts per page
 paginate: 10
