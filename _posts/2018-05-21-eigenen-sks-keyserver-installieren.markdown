@@ -4,6 +4,7 @@ title: Einen SKS Keyserver installieren
 author: Manuel Zarat
 category: tutorials
 permalink: /blog/eigenen-sks-keyserver-installieren
+published: true
 ---
 
 Der SKS Keyserver lässt sich bequem über den Paketmanager installieren
