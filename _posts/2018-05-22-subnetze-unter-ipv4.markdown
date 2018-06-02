@@ -9,6 +9,7 @@ published: true
 ---
 
 Oft ist es aus kosten- sicherheits- oder personaltechnischen Gründen erforderlich, das eigene Netzwerk in mehrere kleinere Subnetze zu unterteilen um diese logisch voneinander zu trennen.
+<!--excerpt_separator-->
 Gründe
 
     Trennen von Netzwerken unterschiedlicher Topologie
