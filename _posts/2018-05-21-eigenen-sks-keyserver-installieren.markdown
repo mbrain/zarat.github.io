@@ -7,7 +7,8 @@ permalink: /blog/eigenen-sks-keyserver-installieren
 published: true
 ---
 
-Der SKS Keyserver lässt sich bequem über den Paketmanager installieren
+Der SKS Keyserver lässt sich bequem über den Linux Paketmanager installieren.
+<!--excerpt_separator-->
 
 apt-get install sks
 
