@@ -110,7 +110,9 @@ und der entsprechende Inhalt
 @       IN      NS      zarat.ml.
 
 12      IN      PTR     zarat.ml.
-12      IN      PTR     wiki.zarat.ml.</pre>
+12      IN      PTR     wiki.zarat.ml.
+
+</pre>
 
  
 Mehr zu DNS finden Sie in meinem WIKI.
