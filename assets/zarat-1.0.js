@@ -3,7 +3,7 @@
     ! function() {
         var c = b.createElement("script"),
             d = "https://api.github.com/repos/",
-            e = "bernardopacheco",
+            e = "zarat",
             f = e + ".github.io";
         c.type = "text/javascript", c.async = !0, c.src = d + e + "/" + f + "?callback=" + e + ".getGitHubRepoInfo", a[e] = a[e] || {}, a[e].getGitHubRepoInfo = function(a) {
             var c = a.data.stargazers_count,
@@ -33,15 +33,15 @@
             c.parentNode.insertBefore(a, c)
         }(),
         function() {
-            var a = "bernardopacheco",
+            var a = "zarat",
                 c = b.createElement("script");
             c.type = "text/javascript", c.async = !0, c.src = "http://" + a + ".disqus.com/count.js", (b.getElementsByTagName("HEAD")[0] || b.getElementsByTagName("BODY")[0]).appendChild(c)
         }(),
         function() {
             var c = b.createElement("script"),
-                d = "bernardopacheco",
+                d = "zarat",
                 e = "https://disqus.com/api/3.0/forums/listPosts.jsonp?forum=",
-                f = "bernardopacheco",
+                f = "zarat",
                 g = "o2szu05bLNqiXiRvqe2oFvIHYYVR24eVkQiGs5WHcj0VUnvF8GCqD9HQUZErwCe7";
             c.type = "text/javascript", c.async = !0, c.src = e + f + "&related=thread&api_key=" + g + "&callback=" + d + ".getRecentComments", a[d] = a[d] || {}, a[d].getRecentComments = function(a) {
                 function c() {
