@@ -9,40 +9,40 @@ permalink: /blog/einen-gpg-schlusselbund-erstellen
 
 Der SKS Keyserver lässt sich bequem über den Paketmanager installieren
 
-apt-get install sks
+<pre>apt-get install sks</pre>
 
-Weil der Dienst nach der Installation automatisch startet, beende ich ihn vorerst
-
-service sks stop
-
-Während der Installation wurde ein Benutzer debian-sks angelegt. Unter diesem installieren wir den Server mit
-
-su debian-sks -c '/usr/sbin/sks build'
+Weil der Dienst nach der Installation automatisch startet, beende ich ihn vorerst.
 
 <!--excerpt_separator-->
 
+<pre>service sks stop</pre>
+
+Während der Installation wurde ein Benutzer debian-sks angelegt. Unter diesem installieren wir den Server mit
+
+<pre>su debian-sks -c '/usr/sbin/sks build'</pre>
+
 Da mein Schlüsselserver sich nicht mit anderen synchronisieren soll ersetze ich noch den Inhalt folgender Dateien
 
-echo '# Empty - Do not communicate with other keyservers.' >/etc/sks/mailsync
-echo '# Empty - Do not communicate with other keyservers.' >/etc/sks/membership
+<pre>echo '# Empty - Do not communicate with other keyservers.' >/etc/sks/mailsync
+echo '# Empty - Do not communicate with other keyservers.' >/etc/sks/membership</pre>
 
 Nun noch einige kleine Parameter setzen
 
-cat >/etc/sks/sksconf <<'EOF'
+<pre>cat >/etc/sks/sksconf <<'EOF'
 pagesize: 16
 ptree_pagesize: 16
-EOF
+EOF</pre>
 
 als Service registrieren
 
-systemctl enable sks.service
+<pre>systemctl enable sks.service</pre>
 
 und den Autostart aktivieren.
 
-echo 'initstart=yes' >/etc/default/sks
+<pre>echo 'initstart=yes' >/etc/default/sks</pre>
 
 Der Schlüsselserver ist somit einsatzbereit und kann mit
 
-service sks start
+<pre>service sks start</pre>
 
 gestartet werden und damit ist unser Schlüsselserver auch schon bereit ihn zu testen.
