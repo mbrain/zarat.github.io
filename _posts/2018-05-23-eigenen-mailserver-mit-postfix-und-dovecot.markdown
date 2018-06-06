@@ -11,15 +11,15 @@ Postfix installieren
 
 Nachdem das frisch installierte System auf den neuesten Stand gebracht wurde kann man Postfix bequem über das APT Tool installieren.
 
-root@server:~# apt-get install postfix
+<pre>root@server:~# apt-get install postfix</pre>
 
 Danach bearbeite ich gleich die Datei
 
-/etc/postfix/master.c
+<pre>/etc/postfix/master.cf</pre>
 
 um darin die Parameter für den vordefinierten Submission Block auszukommentieren. Submission stellt Verschlüsselung via STARTTLS bereit.
 
-submission inet n       -       -       -       -       smtpd
+<pre>submission inet n       -       -       -       -       smtpd
   -o syslog_name=postfix/submission
   -o smtpd_tls_wrappermode=no
   -o smtpd_tls_security_level=encrypt
@@ -27,15 +27,15 @@ submission inet n       -       -       -       -       smtpd
   -o smtpd_recipient_restrictions=permit_mynetworks,permit_sasl_authenticated,reject
   -o milter_macro_daemon_name=ORIGINATING
   -o smtpd_sasl_type=dovecot
-  -o smtpd_sasl_path=private/auth
+  -o smtpd_sasl_path=private/auth</pre>
 
 Nun öffne ich die Datei
 
-/etc/postfix/main.cf
+<pre>/etc/postfix/main.cf</pre>
 
 und ersetze den Inhalt mit
 
-#Default settings
+<pre>#Default settings
 myhostname = zarat.ml # ersetzen
 myorigin = /etc/mailname
 mydestination = zarat.ml, localhost, localhost.localdomain # ersetzen
@@ -56,22 +56,21 @@ smtpd_tls_protocols = !SSLv2, !SSLv3
 #Optional settings
 local_recipient_maps = proxy:unix:passwd.byname $alias_maps
 alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
+alias_database = hash:/etc/aliases</pre>
 
-Weiter…
 Dovecot installieren
 
 Dovecot ist der MDA, der Mails an die jeweiligen Mailboxen verteilt und ausliefert. Auch Dovecot kann über das APT Tool installiert werden.
 
-apt-get install dovecot-core dovecot-imapd
+<pre>apt-get install dovecot-core dovecot-imapd</pre>
 
 Ich bearbeite auch hier wieder zuerst die Datei
 
-/etc/dovecot/dovecot.conf
+<pre>/etc/dovecot/dovecot.conf</pre>
 
 indem ich an das Ende folgendes anhänge
 
-disable_plaintext_auth = no
+<pre>disable_plaintext_auth = no
 mail_privileged_group = mail
 mail_location = mbox:~/mail:INBOX=/var/mail/%u
 userdb {
@@ -118,6 +117,6 @@ service auth {
 }
 ssl=required
 ssl_cert = </etc/ssl/certs/mailcert.pem
-ssl_key = </etc/ssl/private/mail.key
+ssl_key = </etc/ssl/private/mail.key</pre>
 
 Es folgt das Anlegen von Mailboxen und Benutzern.
