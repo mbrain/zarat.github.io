@@ -2,38 +2,18 @@
 layout: default
 ---
 
-<section id="post">
+<div class="sp-content-item">
+  
+  <div class="sp-content-item-head"><a>{{ page.title }}</a></div>
+  
+  <div class="sp-content-item-head-secondary">
+    {{ page.date | date: "%B" }}
+    {{ page.date | date: "%d" }},
+    {{ page.date | date: "%Y" }}
+  </div>
 
-  <article class="post">
+  <div class="sp-content-item-body">
+    {{ content }}
+  </div>
 
-    <h1 class="post-title">
-      <a>{{ page.title }}</a>
-    </h1>
-    <!-- title -->
-
-    <div class="post-meta">
-      <ul class="list-inline">
-        <li>
-            {{ page.date | date: "%B" }}
-            {{ page.date | date: "%d" }},
-            {{ page.date | date: "%Y" }}
-        </li>
-        <li>
-          <a href="//github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/edit/master/{{ page.path }}" target="_blank"><i class="fa fa-github"></i>&nbsp;Edit this post on GitHub</a>
-        </li>
-      </ul>
-    </div>
-    <!-- meta -->
-
-    <section class="post-content">
-      {{ content }}
-    </section>
-    <!-- content -->
-
-
-    <footer class="post-footer">
-    </footer>
-
-  </article>
-
-</section>
+</div>
