@@ -6,9 +6,9 @@ category: tutorials
 permalink: /blog/eigener-mailserver-mit-postfix-und-dovecot
 ---
 
-Ein Mailserver ist kein einzelner Dienst, sondern setzt sich üblicherweise aus mehreren Komponenten zusammen. Das sind im Wesentlichen ein Mail transfer agent (MTA) für das Senden und Empfangen sowie ein Message delivery agent (MDA) für den Zugriff auf Mails durch die jeweiligen Benutzer. Der MTA sendet und empfängt über SMTP. Der MDA liefert Emails aus, erstellt, ändert und löscht Ordner auf dem Server und setzt Dateiattribute mit Hilfe von IMAP und POP. 
+Ein Mailserver ist kein einzelner Dienst, sondern setzt sich üblicherweise aus mehreren Komponenten zusammen. Das sind im Wesentlichen ein Mail transfer agent (MTA) für das Senden und Empfangen sowie ein Message delivery agent (MDA) für den Zugriff auf Mails durch die jeweiligen Benutzer. 
 <!--excerpt_separator-->
-Beide gibt es auch in verschlüsselter Form. Einen Mailserver im Internet zu betreiben ist eine verantwortungsvolle Aufgabe. Arbeitet man nicht sorgfältig, schafft man leicht ein sogenanntes Open Relay, welches sehr schnell als Spamschleuder missbraucht werden wird. Ich möchte zeigen wie man mit Hilfe von Postfix, Dovecot und Ende-zu-Ende Verschlüsselung einen Emailserver installiert um die private oder firmeninterne Kommunikation wieder unter die eigene und alleinige Kontrolle zu bringen.
+Der MTA sendet und empfängt über SMTP. Der MDA liefert Emails aus, erstellt, ändert und löscht Ordner auf dem Server und setzt Dateiattribute mit Hilfe von IMAP und POP. Beide gibt es auch in verschlüsselter Form. Einen Mailserver im Internet zu betreiben ist eine verantwortungsvolle Aufgabe. Arbeitet man nicht sorgfältig, schafft man leicht ein sogenanntes Open Relay, welches sehr schnell als Spamschleuder missbraucht werden wird. Ich möchte zeigen wie man mit Hilfe von Postfix, Dovecot und Ende-zu-Ende Verschlüsselung einen Emailserver installiert um die private oder firmeninterne Kommunikation wieder unter die eigene und alleinige Kontrolle zu bringen.
 
 <h3>Postfix installieren</h3>
 
