@@ -4,6 +4,8 @@
   {% include head.html %}
 
   <body>
+    
+  <div class="sp-main-wrapper">
 
     {% include header.html %}
 
@@ -15,15 +17,17 @@
     <div class="sp-sidebar">
         
       <div class='sp-sidebar-item'>
+        
         <div class='sp-sidebar-item-head'>Recent Posts</div>
-           {% for post in site.posts limit:5 %}
-                      <div class='sp-sidebar-item-head'><a href="{{ post.url }}">{{ post.title }}</a></div>
-                    {% endfor %}
+        
+        {% for post in site.posts limit:5 %}<div class='sp-sidebar-item-head'><a href="{{ post.url }}">{{ post.title }}</a></div>{% endfor %}
+      
       </div>
         
     </div>  
 
     <div style="clear: both"></div>
+    
   </div>
 
   </body>
