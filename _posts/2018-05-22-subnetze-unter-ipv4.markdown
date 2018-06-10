@@ -10,7 +10,8 @@ published: true
 
 Oft ist es aus kosten- sicherheits- oder personaltechnischen Gründen erforderlich, das eigene Netzwerk in mehrere kleinere Subnetze zu unterteilen um diese logisch voneinander zu trennen.
 <!--excerpt_separator-->
-Gründe
+
+<h4>Gründe</h4>
 
 <ul>
 <li>Trennen von Netzwerken unterschiedlicher Topologie</li>
@@ -21,12 +22,14 @@ Gründe
 <li>Trennen des Netzwerks zur Reduzierung des Verkehrsaufkommens</li>
 </ul>
 
-Vorteile
+<h4>Vorteile</h4>
 
-    Flexibilität bei der Adressierung für den Administrator.
-    Broadcast-Unterteilung.
-    Höhere Sicherheit des LANs.
-    Ungenutzte IP Adressen wie bei Klasse A, B oder C Netzen können frei eingeteilt, vermietet oder verkauft werden.
+<ul>
+<li>Flexibilität bei der Adressierung für den Administrator.</li>
+<li>Broadcast-Unterteilung.</li>
+<li>Höhere Sicherheit des LANs.</li>
+<li>Ungenutzte IP Adressen wie bei Klasse A, B oder C Netzen können frei eingeteilt, vermietet oder verkauft werden.</li>
+</ul>
 
 Eine Subnetzmaske besteht wie eine IPv4 Adresse aus 32 Bit. Sie bestimmt, welcher Teil der IP Adresse das Netz und welcher Teil den Host identifiziert. Ein Router führt ein logisches AND aus und maskiert die IP Adresse mit ihrer Netzmaske, um zu erfahren, in welches Netz das Datenpaket weitergeleitet werden muss.
 
