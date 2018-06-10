@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
+  
+  <div class="sp-content-item">
 
-<section>
+    <div class="sp-content-item-head"><a>{{ page.title }}</a></div>
 
-  <article class="page">
-    {{ content }}
-  </article>
+    <div class="sp-content-item-head-secondary">
+      {{ page.date | date: "%B" }}
+      {{ page.date | date: "%d" }},
+      {{ page.date | date: "%Y" }}
+    </div>
 
-</section>
+    <div class="sp-content-item-body">
+      {{ content }}
+    </div>
+
+  </div>
