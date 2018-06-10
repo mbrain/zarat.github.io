@@ -12,12 +12,14 @@ Oft ist es aus kosten- sicherheits- oder personaltechnischen Gründen erforderli
 <!--excerpt_separator-->
 Gründe
 
-    Trennen von Netzwerken unterschiedlicher Topologie
-    Trennen von Netzwerken nach Standorten, Gebäuden und Etagen
-    Trennen von Netzwerken nach Abteilungen und Bereichen
-    Trennen von sensitiven Bereichen vom Hauptnetz
-    Trennen des Netzwerks in logische Arbeitsgruppen
-    Trennen des Netzwerks zur Reduzierung des Verkehrsaufkommens
+<ul>
+<li>Trennen von Netzwerken unterschiedlicher Topologie</li>
+<li>Trennen von Netzwerken nach Standorten, Gebäuden und Etagen</li>
+<li>Trennen von Netzwerken nach Abteilungen und Bereichen</li>
+<li>Trennen von sensitiven Bereichen vom Hauptnetz</li>
+<li>Trennen des Netzwerks in logische Arbeitsgruppen</li>
+<li>Trennen des Netzwerks zur Reduzierung des Verkehrsaufkommens</li>
+</ul>
 
 Vorteile
 
