@@ -114,8 +114,10 @@ Schlüssel exportieren
 
 Mit dem Befehl
 
-<pre>gpg --armor --export <KeyID> > dateiname.asc
-gpg --armor --export-secret-key <KeyID> >> dateiname.asc</pre>
+<pre>
+gpg --armor --export KeyID > dateiname.asc
+gpg --armor --export-secret-key KeyID >> dateiname.asc
+</pre>
 
 können Sie Ihren öffentlichen und Ihren privaten Schlüssel in eine Datei exportieren. Achten Sie auf die doppelten Pfeile beim 2. Aufruf! Der Parameter –armor bewirkt die Ausgabe im bekannten ASCII Format. Mit diesen exportierten Sicherungen können Sie Ihren Schlüsselbund auf weitere Systeme portieren.
 
