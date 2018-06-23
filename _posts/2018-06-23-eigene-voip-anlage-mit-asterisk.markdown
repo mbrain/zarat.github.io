@@ -9,10 +9,10 @@ permalink: /blog/eigene-voip-anlage-mit-asterisk
 
 Seit in meiner Firma die Alcatel ISDN Anlage ausgemustert wurde, beschäftige ich mich intensiv mit der neuen, hauseigenen VoIP Lösung Asterisk. Einige Vorteile von IP Telefonie gegenüber herkömmlicher Telefonie sind:
 
-    Voice over IP ist bedeutend günstiger. Sowohl innerhalb Österreichs, als auch im Ausland. Intern und zwischen Ihren Niederlassungen telefonieren Sie ohnehin umsonst.
-    Bei neuen Nebenstellen sind keine aufwendigen Erweiterungen der Ports oder IC nötig. Auch die aufwendige Verkabelung fällt oft weg.
-    Bei vielen PBX sind Videotelefonie, Chat, Voicemail, Anrufgruppen, Rufumlegung, Reporting-Tools und vieles mehr bereits enthalten.
-    VoIP Endgeräte, also Softwaretelefone sind für so gut wie jede Plattform – oft kostenlos – verfügbar.
+- Voice over IP ist bedeutend günstiger. Sowohl innerhalb Österreichs, als auch im Ausland. Intern und zwischen Ihren Niederlassungen telefonieren Sie ohnehin umsonst.
+- Bei neuen Nebenstellen sind keine aufwendigen Erweiterungen der Ports oder IC nötig. Auch die aufwendige Verkabelung fällt oft weg.
+- Bei vielen PBX sind Videotelefonie, Chat, Voicemail, Anrufgruppen, Rufumlegung, Reporting-Tools und vieles mehr bereits enthalten.
+- VoIP Endgeräte, also Softwaretelefone sind für so gut wie jede Plattform – oft kostenlos – verfügbar.
 
 <!--excerpt_separator-->
 
