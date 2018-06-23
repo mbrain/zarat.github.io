@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EigeneVoIP Anlage mit Bind
+title: Eigene VoIP Anlage mit Asterisk
 author: Manuel Zarat
 category: tutorials
 tags: voip
