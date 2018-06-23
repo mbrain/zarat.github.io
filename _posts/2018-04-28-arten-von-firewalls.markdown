@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Eigener Nameserver mit Bind
+title: Arten von Firewalls
 author: Manuel Zarat
-category: Uncategorized
+category: sicherheit
 tags: security
 permalink: /blog/arten-von-firewalls
 ---
