@@ -7,17 +7,15 @@ tags: protokoll programm
 permalink: /blog/einen-gpg-schlusselbund-erstellen
 ---
 
-<!--excerpt_separator-->
-
 GnuPG verwendet ein asymmetrisches Verfahren, was bedeutet jeder Teilnehmer hat 2 Schlüssel – einen öffentlichen und einen privaten. Wenn Sie OpenPGP noch nie verwendet und noch kein Schlüsselpaar erzeugt haben, wird Ihr Schlüsselbund noch vollkommen leer sein.
+
+<!--excerpt_separator-->
 
 Besonders wichtig ist es, folgende Sachen zu wissen
 
-    Ihr öffentlicher Schlüssel kann nach Upload auf einen Keyserver nicht mehr aus dem öffentlichen Keyring gelöscht – nur für ungültig erklärt werden!
-    Zum Widerrufen (für ungültig erklären) des Schlüssels benötigen Sie ein Widerrufszertifikat
-    Um ein Widerrufszertifikat zu generieren benötigen Sie wiederum Ihren privaten Schlüssel
-
-<!--excerpt_separator-->
+- Ihr öffentlicher Schlüssel kann nach Upload auf einen Keyserver nicht mehr aus dem öffentlichen Keyring gelöscht – nur für ungültig erklärt werden!
+- Zum Widerrufen (für ungültig erklären) des Schlüssels benötigen Sie ein Widerrufszertifikat
+- Um ein Widerrufszertifikat zu generieren benötigen Sie wiederum Ihren privaten Schlüssel
 
 Nach Generierung der Schlüssel sollte man also gleich ein Widerrufszertifikat erstellen – für den Fall das Sie Ihren privaten Schlüssel verlieren oder das Passwort vergessen. Das werden wir im Anschluss an die Generierung der Schlüssel erledigen. Wie Sie Ihren Schlüsselbund verwalten, werde ich in einem eigenen Artikel zeigen.
 
