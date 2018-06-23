@@ -21,7 +21,7 @@ Nach Generierung der Schlüssel sollte man also gleich ein Widerrufszertifikat e
 
 Schlüsselpaar generieren
 
-<pre>user@machine:~# gpg --gen-key</pre>
+<pre>user@machine:~# gpg --gen-key</pre> 
 
 Dieser Befehl generiert ein neues Schlüsselpaar. Sie werden gefragt, wozu der Schlüssel verwendet werden soll siehe Flags. Standardeinstellung ist 1 für RSA. Wenn sich noch keine Schlüssel in Ihrem lokalen Schlüsselbund befinden, wird beim Ersten Aufruf eine Initialmeldung erscheinen, die Sie darüber informiert, das GnuPG eingerichtet wurde. In diesem Fall rufen Sie den Befehl einfach nocheinmal auf.
 
