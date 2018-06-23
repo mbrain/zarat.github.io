@@ -4,15 +4,14 @@ title: Eigener Nameserver mit Bind
 author: Manuel Zarat
 category: Uncategorized
 tags: security
-permalink: /blog/2018-04-28-arten-von-firewalls
-published: true
+permalink: /blog/arten-von-firewalls
 ---
 
 Zum Schutz privater Netzwerke durch Einflüsse von Außen oder auch aus dem eigenen Netzwerk setzt man Firewalls ein. Man unterscheidet dabei zwischen Software – und Hardwarefirewalls, es gibt aber auch Mischungen aus beidem. Verschiedene Arten von Filter – und Regeltechniken ermöglichen Protokollierung, Inspektion und sogar Manipulation ein – und ausgehender Datenpakete. Diese drei Kategorien schließen sich allerdings nicht gegenseitig aus. Die meisten modernen Firewalls bieten Merkmale, durch die man sie in mehr als eine Kategorie einordnen kann. Firewalls kann man aber grundsätzlich in 3 Grundarten unterteilen:
 
-    Paketfilter
-    Stateful inspection
-    Proxy Firewalls
+- Paketfilter
+- Stateful inspection
+- Proxy Firewalls
 
 Es gibt noch weitere Arten, ich werde allerdings nur stateful inspection und application level firewalls behandeln. Im Prinzip arbeitet jeder Home Router, der NAT (Network address translation) ausführt bereits als Firewall – in großen Unternehmen braucht es allerdings oft etwas mehr Sicherheit beziehungsweise Flexibilität. Es müssen zum Beispiel IP Telefone, Email und Dateiserver oder andere Netzwerkdienste – oft über den eigenen Netzwerkhorizont hinaus – bereitgestellt werden.
 
