@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Einen GPG Schlüsselbund erstellen
 author: Manuel Zarat
 category: tutorials
