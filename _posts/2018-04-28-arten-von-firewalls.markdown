@@ -7,7 +7,9 @@ tags: security
 permalink: /blog/arten-von-firewalls
 ---
 
-Zum Schutz privater Netzwerke durch Einflüsse von Außen oder auch aus dem eigenen Netzwerk setzt man Firewalls ein. Man unterscheidet dabei zwischen Software – und Hardwarefirewalls, es gibt aber auch Mischungen aus beidem. Verschiedene Arten von Filter – und Regeltechniken ermöglichen Protokollierung, Inspektion und sogar Manipulation ein – und ausgehender Datenpakete. Diese drei Kategorien schließen sich allerdings nicht gegenseitig aus. Die meisten modernen Firewalls bieten Merkmale, durch die man sie in mehr als eine Kategorie einordnen kann. Firewalls kann man aber grundsätzlich in 3 Grundarten unterteilen:
+Zum Schutz privater Netzwerke durch Einflüsse von Außen oder auch aus dem eigenen Netzwerk setzt man Firewalls ein. Man unterscheidet dabei zwischen Software – und Hardwarefirewalls, es gibt aber auch Mischungen aus beidem. Verschiedene Arten von Filter – und Regeltechniken ermöglichen Protokollierung, Inspektion und sogar Manipulation ein – und ausgehender Datenpakete. 
+<!--excerpt_separator-->
+Diese drei Kategorien schließen sich allerdings nicht gegenseitig aus. Die meisten modernen Firewalls bieten Merkmale, durch die man sie in mehr als eine Kategorie einordnen kann. Firewalls kann man aber grundsätzlich in 3 Grundarten unterteilen:
 
 - Paketfilter
 - Stateful inspection
