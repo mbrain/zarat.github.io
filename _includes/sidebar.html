@@ -1,12 +1,6 @@
 <script type="text/javascript">
   var postsURL = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
   var postsTitle = [{% for post in site.posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-  {% coment %}
-  // randomize posts from a specific category
-  //
-  // var postsURL = [{% for post in site.posts %}{% if post.category contains 'reviews' %}{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}];
-  // var postsTitle = [{% for post in site.posts %}{% if post.category contains 'reviews' %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}];
-  {% endcomment %}
 </script>
 
 
