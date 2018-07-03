@@ -7,7 +7,7 @@ var postlist = [
 ];
 for( i=0; i<5;i++) {
 var randompost = postlist[Math.floor(Math.random()*postlist.length)];
-          unset( postlist[Math.floor(Math.random()*postlist.length)] );
+postlist.pop( randompost );
 div = document.getElementById('testdiv');
 var newNode = document.createElement('div');      
 newNode.innerHTML = randompost;
