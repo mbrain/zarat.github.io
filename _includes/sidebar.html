@@ -6,8 +6,7 @@ var postlist = [
 {% endfor %}
 ];
 for( i=0; i<5;i++) {
-var randompost = postlist[Math.floor(Math.random()*postlist.length)];
-postlist.pop( randompost );
+var randompost = postlist.pop(postlist[Math.floor(Math.random()*postlist.length)]);
 div = document.getElementById('testdiv');
 var newNode = document.createElement('div');      
 newNode.innerHTML = randompost;
