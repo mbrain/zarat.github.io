@@ -2,7 +2,7 @@
 <script>
 var postlist = [
 {% for post in site.posts limit:5 %}
-          "<div class='sp-sidebar-item-head'><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></div>",
+          "<p><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></p>",
 {% endfor %}
 ];
 var randompost = postlist[Math.floor(Math.random()*postlist.length)];
