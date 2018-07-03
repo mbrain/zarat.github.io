@@ -1,3 +1,4 @@
+<div id="testdiv"></div>
 <script>
 var myArray = [
 {% for post in site.posts limit:5 %}
@@ -5,5 +6,6 @@ var myArray = [
 {% endfor %}
 ];
 var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-window.onload = console.log(randomItem);
+div = document.getElementById('testdiv');
+div.appendChild(randomItem);
 </script>
