@@ -1,7 +1,7 @@
 <div id="testdiv"></div>
 <script>
 var postlist = [
-{% for post in site.posts limit:5 %}
+{% for post in site.posts %}
           "<p><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></p>",
 {% endfor %}
 ];
