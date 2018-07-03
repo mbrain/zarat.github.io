@@ -1,17 +1,28 @@
-<div id="testdiv"></div>
-<script>
-var postlist = [
-{% for post in site.posts %}
-          "<p><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></p>",
-{% endfor %}
-];
-for( i=0; i<5;i++) {
-var randompost = postlist[Math.floor(Math.random()*postlist.length)];
-div = document.getElementById('testdiv');
-var newNode = document.createElement('div');      
-newNode.innerHTML = randompost;
-div.appendChild( newNode );
-          console.log(i);
-}
-                  
+<script type="text/javascript">
+  var postsURL = [{% for post in site.posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var postsTitle = [{% for post in site.posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>
+
+
+<script type="text/javascript">
+  var randomIndexUsed = [];
+  var counter = 0;
+  var numberOfPosts = 5;
+  while (counter < numberOfPosts) {
+    var randomIndex;
+    var postURL;
+    var postTitle;
+    randomIndex = Math.floor(Math.random() * postsHREF.length);
+    if (randomIndexUsed.indexOf(randomIndex) == "-1") {
+      postURL = postsURL[randomIndex];
+      postTitle = postsTitle[randomIndex];
+      if (counter == (numberOfPosts - 1)) {
+        document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p>');
+      } else {
+        document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p><hr />');
+      }
+      randomIndexUsed.push(randomIndex);
+      counter++;
+    }
+  }
 </script>
