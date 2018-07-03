@@ -7,6 +7,9 @@ var postlist = [
 ];
 var randompost = postlist[Math.floor(Math.random()*postlist.length)];
 div = document.getElementById('testdiv');
-var content = document.createTextNode(randompost);
-div.appendChild(content);         
+
+var newNode = document.createElement('div');      
+newNode.innerHTML = randompost;
+div.appendChild( newNode );          
+                  
 </script>
