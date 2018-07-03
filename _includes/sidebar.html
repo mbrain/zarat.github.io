@@ -1,29 +1,11 @@
 <div id="testdiv"><ul></ul></div>
 <script>
-var myArray = [
+var postlist = [
 {% for post in site.posts limit:5 %}
           "<div class='sp-sidebar-item-head'><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></div>",
 {% endfor %}
 ];
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+var randompost = myArray[Math.floor(Math.random()*myArray.length)];
 div = document.getElementById('testdiv');
-          ul = div.ul;
-ul.appendChild = randomItem;
-          
-  var randomIndexUsed = [];
-  var counter = 0;
-  var numberOfPosts = 5;
-  while (counter < numberOfPosts) {
-    var randomIndex;
-    randomIndex = Math.floor(Math.random() * myArray.length);
-    if (randomIndexUsed.indexOf(randomIndex) == "-1") {
-      if (counter == (numberOfPosts - 1)) {
-        document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p>');
-      } else {
-        document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p><hr />');
-      }
-      randomIndexUsed.push(randomIndex);
-      counter++;
-    }
-  }
+iv.append(randompost);          
 </script>
