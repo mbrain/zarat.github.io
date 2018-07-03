@@ -1,4 +1,4 @@
-<div id="testdiv"></div>
+<div id="testdiv"><span></span></div>
 <script>
 var myArray = [
 {% for post in site.posts limit:5 %}
@@ -7,5 +7,5 @@ var myArray = [
 ];
 var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
 div = document.getElementById('testdiv');
-div.appendChild(randomItem);
+div.span.appendChild(randomItem);
 </script>
