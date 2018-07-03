@@ -5,11 +5,13 @@ var postlist = [
           "<p><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></p>",
 {% endfor %}
 ];
+for( i=0; i<5;i++) {
 var randompost = postlist[Math.floor(Math.random()*postlist.length)];
 div = document.getElementById('testdiv');
-
 var newNode = document.createElement('div');      
 newNode.innerHTML = randompost;
-div.appendChild( newNode );          
+div.appendChild( newNode );
+          console.log(i);
+}
                   
 </script>
