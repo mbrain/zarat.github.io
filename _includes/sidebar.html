@@ -16,7 +16,7 @@
     if (randomIndexUsed.indexOf(randomIndex) == "-1") {
       postURL = postsURL[randomIndex];
       postTitle = postsTitle[randomIndex];
-      document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p>');
+      document.write('<div class="sidebar-item-box-head"><a href="' + postURL + '">' + postTitle + '</a></div>');
       randomIndexUsed.push(randomIndex);
       counter++;
     }
