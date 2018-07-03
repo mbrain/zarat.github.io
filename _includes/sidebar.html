@@ -5,7 +5,7 @@ var postlist = [
           "<div class='sp-sidebar-item-head'><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></div>",
 {% endfor %}
 ];
-var randompost = myArray[Math.floor(Math.random()*myArray.length)];
+var randompost = postlist[Math.floor(Math.random()*postlist.length)];
 div = document.getElementById('testdiv');
 var content = document.createTextNode(randompost);
 div.appendChild(content);         
