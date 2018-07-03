@@ -16,11 +16,7 @@
     if (randomIndexUsed.indexOf(randomIndex) == "-1") {
       postURL = postsURL[randomIndex];
       postTitle = postsTitle[randomIndex];
-      if (counter == (numberOfPosts - 1)) {
-        document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p>');
-      } else {
-        document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p>');
-      }
+      document.write('<p><a href="' + postURL + '">' + postTitle + '</a></p>');
       randomIndexUsed.push(randomIndex);
       counter++;
     }
