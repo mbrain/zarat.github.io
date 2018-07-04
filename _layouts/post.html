@@ -11,7 +11,7 @@ layout: default
       {{ page.date | date: "%d" }},
       {{ page.date | date: "%Y" }} - 
       
-      <span>{% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
+      <span>Tags: {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
             <a href="/tag/{{ tag_name }}">{{ tag_name }}</a> 
       {% endfor %}</span>
       
