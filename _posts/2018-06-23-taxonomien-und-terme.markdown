@@ -8,6 +8,7 @@ permalink: /blog/taxonomien-und-terme
 ---
 
 <p>Relationen sollen Inhalte nach vorgegebenen Merkmalen gruppieren. Bereits eingebaute Relationen sind Inhaltstypen (type) und Kategorien (category), die standardmäßig beim Erstellen neuer Inhalte vergeben werden können. In weiterer Folge ist (statt bisher nur flach) eine Aufteilung in flache und hierarchische Taxonomien geplant. Derzeit funktionieren Taxonomien rein flach: einem Inhalt können mehrere Taxonomien vergeben werden, die wiederum jeweils mehrere Terme referenzieren können. In der Datenbank spielt sich das in 3 (nimmt man Item dazu dann 4) Tabellen ab.</p>
+<!--excerpt_separator-->
 <h3>Tabelle: term</h3>
 <p>In dieser Tabelle werden - wie der Name mehr oder weniger verrät - einfach nur die Terme definiert. Vielleicht bekommen sie in Zukunft weitere Attribute, im Moment nicht. Ich nehme als Beispiel</p>
 <ul>
