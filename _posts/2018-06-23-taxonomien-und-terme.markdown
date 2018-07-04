@@ -44,13 +44,6 @@ permalink: /blog/taxonomien-und-terme
 <p> </p>
 <h3>Eigene Taxonomien erstellen</h3>
 <p>Eigene Taxonomien kann man einfach über das Admin Interface anlegen. Ich hab zum Beispiel die Taxonomie tag angelegt. Im Template single.php kann ich die zugehörigen Tags dann anzeigen. Die Links zeigen automatisch auf URIs, die das entsprechende Archiv anzeigen. Also alle Inhalte, die die selbe Taxonomie -&gt; Term Relation aufweisen. Wird kein Term angegeben werden alle Inhalte angezeigt die zumindest die selbe Taxonomie haben.</p>
-<pre>if( $categories = $this->terms( 'category' ) ) {
-echo "<div class='sp-sidebar-item'>";
-    echo "<div class='sp-sidebar-item-head'>Kategorien</div>";
-    echo "<div class='sp-sidebar-item-box'>\n";
-    foreach( $categories as $category ) { echo "<div class='sp-sidebar-item-box-head'><a href='../?category=$category[id]'>$category[name]</a></div>"; }
-    echo "</div>\n";
-echo "</div>";
-}</pre>
+<pre>if( $categories = $this-&gt;terms( &#039;category&#039; ) ) {<br />echo "&lt;div class=&#039;sp-sidebar-item&#039;&gt;";<br />    echo "&lt;div class=&#039;sp-sidebar-item-head&#039;&gt;Kategorien&lt;/div&gt;";<br />    echo "&lt;div class=&#039;sp-sidebar-item-box&#039;&gt;\n";<br />    foreach( $categories as $category ) { echo "&lt;div class=&#039;sp-sidebar-item-box-head&#039;&gt;&lt;a href=&#039;../?category=$category[id]&#039;&gt;$category[name]&lt;/a&gt;&lt;/div&gt;"; }<br />    echo "&lt;/div&gt;\n";<br />echo "&lt;/div&gt;";<br />}</pre>
 <p>Es kommt aber noch eine Funktion bzw. sogar eine neue Klasse um diese Taxonomie Abrufe zu automatisieren.</p>
 <p>Erfindet zwar nicht das Rad neu, ist aber extrem effizient!</p>
