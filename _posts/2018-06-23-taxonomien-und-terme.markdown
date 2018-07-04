@@ -44,18 +44,13 @@ permalink: /blog/taxonomien-und-terme
 <p> </p>
 <h3>Eigene Taxonomien erstellen</h3>
 <p>Eigene Taxonomien kann man einfach über das Admin Interface anlegen. Ich hab zum Beispiel die Taxonomie tag angelegt. Im Template single.php kann ich die zugehörigen Tags dann anzeigen. Die Links zeigen automatisch auf URIs, die das entsprechende Archiv anzeigen. Also alle Inhalte, die die selbe Taxonomie -&gt; Term Relation aufweisen. Wird kein Term angegeben werden alle Inhalte angezeigt die zumindest die selbe Taxonomie haben.</p>
-<pre>$tag_query = "
-        select term.id,term.name from term
-        join term_relation tr on tr.term_id=term.id
-        join term_taxonomy tt on tt.taxonomy='tag' and tt.id=tr.taxonomy_id
-        where tr.object_id=$item[id]
-        ";
-        $the_tags = $this-&gt;fetch_all_assoc( $this-&gt;query( $tag_query ) );
-        if( $the_tags ) {
-        echo " Tags: ";
-            foreach( $the_tags as $i =&gt; $tag ) {          
-                echo $tag['name'] . ", ";      
-            } 
-        }</pre>
+<pre>if( $categories = $this->terms( 'category' ) ) {
+echo "<div class='sp-sidebar-item'>";
+    echo "<div class='sp-sidebar-item-head'>Kategorien</div>";
+    echo "<div class='sp-sidebar-item-box'>\n";
+    foreach( $categories as $category ) { echo "<div class='sp-sidebar-item-box-head'><a href='../?category=$category[id]'>$category[name]</a></div>"; }
+    echo "</div>\n";
+echo "</div>";
+}</pre>
 <p>Es kommt aber noch eine Funktion bzw. sogar eine neue Klasse um diese Taxonomie Abrufe zu automatisieren.</p>
 <p>Erfindet zwar nicht das Rad neu, ist aber extrem effizient!</p>
