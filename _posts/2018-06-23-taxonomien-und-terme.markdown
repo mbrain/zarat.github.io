@@ -39,12 +39,12 @@ permalink: /blog/taxonomien-und-terme
 </ul>
 <p> </p>
 <p>SQL ist eine sehr mächtige Sprache. Im Prinzip kann man die gesamte Logik der so erstellten Relationen in die Datenbank auslagern. Im angeführten Query werden die Taxonomien mit den jeweilig referenzierenden Termen verbunden (mit einem Unterstrich getrennt) in ein eigenes Feld mit dem Spaltenheader "type" des Result Set geschrieben.</p>
-<pre>SELECT item.*, <br />
-GROUP_CONCAT( ( SELECT taxonomy FROM term_taxonomy WHERE id=tr.taxonomy_id ), '_', ( SELECT id FROM term WHERE id=tr.term_id ) ) AS type_int,<br />
-GROUP_CONCAT( ( SELECT taxonomy FROM term_taxonomy WHERE id=tr.taxonomy_id ), '_', ( SELECT name FROM term WHERE id=tr.term_id ) ) AS type_str<br />
-FROM item<br />
-INNER JOIN term_relation tr ON tr.object_id=item.id<br />
-GROUP BY item.id<br />
+<pre>SELECT item.*,
+GROUP_CONCAT( ( SELECT taxonomy FROM term_taxonomy WHERE id=tr.taxonomy_id ), '_', ( SELECT id FROM term WHERE id=tr.term_id ) ) AS type_int,
+GROUP_CONCAT( ( SELECT taxonomy FROM term_taxonomy WHERE id=tr.taxonomy_id ), '_', ( SELECT name FROM term WHERE id=tr.term_id ) ) AS type_str
+FROM item
+INNER JOIN term_relation tr ON tr.object_id=item.id
+GROUP BY item.id
 HAVING type LIKE ('%type_%')</pre>
 <p>Mit einer HAVING Klausel kann man Aliase auf Treffer matchen da WHERE hier syntaktisch falsch wäre. Und außerdem - je mehr Arbeit die Datenbank erledigt, desto schneller und ressourcenschonender läuft das Script. PHP hat Limitierungen wie Buffer, Ausführungszeit und vieles andere, für die Datenbank ist der Query lächerlich. Ich finde ein CMS sollte wirklich nur den Content managen, deshalb nennt man es ja auch so.</p>
 <p> </p>
