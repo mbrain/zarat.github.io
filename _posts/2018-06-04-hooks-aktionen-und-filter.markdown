@@ -3,7 +3,6 @@ layout: post
 title: Hooks, Aktionen und Filter
 author: Manuel Zarat
 category: tutorials
-tags: protokoll programm
 permalink: /blog/hooks-aktionen-und-filter
 ---
 
