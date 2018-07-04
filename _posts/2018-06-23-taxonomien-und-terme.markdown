@@ -2,8 +2,7 @@
 layout: post
 title: Taxonomien und Terme
 author: Manuel Zarat
-category: tutorials
-tags: protokoll programm
+tags: protokoll
 permalink: /blog/taxonomien-und-terme
 ---
 
