@@ -2,10 +2,8 @@
 layout: post
 title: Subnetze unter IPv4
 author: Manuel Zarat
-category: tutorials
-tags: protokoll programm
+tags: protokoll
 permalink: /blog/subnetze-unter-ipv4
-published: true
 ---
 
 Oft ist es aus kosten- sicherheits- oder personaltechnischen Gründen erforderlich, das eigene Netzwerk in mehrere kleinere Subnetze zu unterteilen um diese logisch voneinander zu trennen.
