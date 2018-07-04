@@ -11,6 +11,13 @@ layout: default
       {{ page.date | date: "%d" }},
       {{ page.date | date: "%Y" }} - <a target="_blank" href="//github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/edit/master/{{ page.path }}" target="_blank">Edit on GitHub</a>
     </div>
+    
+<span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  {% endfor %}
+]</span>
 
     <div class="sp-content-item-body">
       {{ content }}
