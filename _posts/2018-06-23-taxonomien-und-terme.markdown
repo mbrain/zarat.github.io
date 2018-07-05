@@ -57,5 +57,3 @@ HAVING type LIKE ('%type_%')</pre>
     echo "Tags: " . implode(', ', $tags ) . " ";
     unset($the_tags, $tags);
 }</pre>
-<p>Es kommt aber noch eine Funktion bzw. sogar eine neue Klasse um diese Taxonomie Abrufe zu automatisieren.</p>
-<p>Erfindet zwar nicht das Rad neu, ist aber extrem effizient!</p>
