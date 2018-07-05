@@ -25,15 +25,15 @@ layout: default
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" role="button" class="btn btn-primary" style="float:left">PREVIOUS</a>
+    <a href="{{ paginator.previous_page_path }}" role="button" class="btn btn-primary" style="float:left">zurück</a>
     {% else %}
-    <button type="button" class="btn btn-primary" disabled="disabled" style="float:left">PREVIOUS</button>
+    <button type="button" class="btn btn-primary" disabled="disabled" style="float:left">zurück</button>
     {% endif %}
     <!-- <span class="page_number">{{ paginator.page }} of {{ paginator.total_pages }}</span> -->
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" role="button" class="btn btn-primary" style="float:right">NEXT</a>
+    <a href="{{ paginator.next_page_path }}" role="button" class="btn btn-primary" style="float:right">vor</a>
     {% else %}
-    <button type="button" class="btn btn-primary" disabled="disabled" style="float:right">NEXT</button>
+    <button type="button" class="btn btn-primary" disabled="disabled" style="float:right">vor</button>
     {% endif %}
   </div>
   {% endif %}
