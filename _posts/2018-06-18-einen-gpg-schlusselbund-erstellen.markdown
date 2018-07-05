@@ -2,8 +2,7 @@
 layout: post
 title: Einen GPG Schlüsselbund erstellen
 author: Manuel Zarat
-category: tutorials
-tags: protokoll programm
+tags: protokoll
 permalink: /blog/einen-gpg-schlusselbund-erstellen
 ---
 
@@ -133,7 +132,7 @@ Widerrufszertifikat erstellen
 
 Nun erstellen wir das zu Beginn erwähnte Widerrufszertifikat. Dazu benötigen wir wieder die KeyID des betreffenden Schlüssels.
 
-<pre>gpg --gen-revoke <KeyID> > <KeyID>.rev.asc</pre>
+<pre>gpg --gen-revoke KeyID > KeyID.rev.asc</pre>
 
 Heben Sie dieses Widerrufszertifikat so sorgsam wie Ihren privaten Schlüssel – aber an einem anderen Ort – auf. Ihr Schlüsselbund ist damit fertig. Ihren öffentlichen Schlüssel können Sie auf verschiedene verteilen wie Sie möchten.
 Schlüssel veröffentlichen
