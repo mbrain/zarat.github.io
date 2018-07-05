@@ -124,7 +124,9 @@ Schlüssel importieren
 
 Um einen exportierten privaten Schlüssel auf einem anderen System zu importieren rufen Sie
 
-<pre>gpg --allow-secret-key-import --import <dateiname>.asc</pre>
+<pre>
+gpg --allow-secret-key-import --import dateiname.asc
+</pre>
 
 und importieren so die Datei. Auf diese Weise können Sie auch öffentliche Schlüssel Ihrer Kontakte importieren.
 
@@ -132,7 +134,9 @@ Widerrufszertifikat erstellen
 
 Nun erstellen wir das zu Beginn erwähnte Widerrufszertifikat. Dazu benötigen wir wieder die KeyID des betreffenden Schlüssels.
 
-<pre>gpg --gen-revoke KeyID > KeyID.rev.asc</pre>
+<pre>
+gpg --gen-revoke KeyID > KeyID.rev.asc
+</pre>
 
 Heben Sie dieses Widerrufszertifikat so sorgsam wie Ihren privaten Schlüssel – aber an einem anderen Ort – auf. Ihr Schlüsselbund ist damit fertig. Ihren öffentlichen Schlüssel können Sie auf verschiedene verteilen wie Sie möchten.
 Schlüssel veröffentlichen
