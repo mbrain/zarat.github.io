@@ -52,5 +52,10 @@ HAVING type LIKE ('%type_%')</pre>
 <p><b>ACHTUNG</b>: Wird diese Funktion im Loop genutzt um z.B zu jedem Item in der Liste die zugehörenden Kategorien anzuzeigen, müssen die Variablen nach jeder Schleife mit Hilfe von<p>
  <pre>unset($categories)</pre>
  <p>gelöscht werden!</p>
+ <pre>if( $the_tags = $this->terms( 'tag', $item['id'] ) ) {
+    foreach( $the_tags as $tag ) { $tags[] = "<a href='../?tag=$tag[id]'>$tag[name]</a>"; }
+    echo "<div class='sp-content-item-body'>Tags: " . implode(', ', $tags ) . "</div>";
+    unset($the_tags, $tags);
+}</pre>
 <p>Es kommt aber noch eine Funktion bzw. sogar eine neue Klasse um diese Taxonomie Abrufe zu automatisieren.</p>
 <p>Erfindet zwar nicht das Rad neu, ist aber extrem effizient!</p>
