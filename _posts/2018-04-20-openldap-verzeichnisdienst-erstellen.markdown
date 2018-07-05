@@ -2,8 +2,7 @@
 layout: post
 title: Einen OpenLDAP Verzeichnisdienst erstellen
 author: Manuel Zarat
-category: tutorials
-tags: protokoll programm
+tags: protokoll
 permalink: /blog/openldap-verzeichnisdienst-erstellen
 ---
 
