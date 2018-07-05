@@ -49,6 +49,8 @@ HAVING type LIKE ('%type_%')</pre>
 <h3>Eigene Taxonomien erstellen</h3>
 <p>Eigene Taxonomien kann man einfach über das Admin Interface anlegen. Ich hab zum Beispiel die Taxonomie tag angelegt. Im Template single.php kann ich die zugehörigen Tags dann anzeigen. Die Links zeigen automatisch auf URIs, die das entsprechende Archiv anzeigen. Also alle Inhalte, die die selbe Taxonomie -&gt; Term Relation aufweisen. Wird kein Term angegeben werden alle Inhalte angezeigt die zumindest die selbe Taxonomie haben.</p>
 <pre>if( $categories = $this-&gt;terms( &#039;category&#039; ) ) {<br />echo "&lt;div class=&#039;sp-sidebar-item&#039;&gt;";<br />    echo "&lt;div class=&#039;sp-sidebar-item-head&#039;&gt;Kategorien&lt;/div&gt;";<br />    echo "&lt;div class=&#039;sp-sidebar-item-box&#039;&gt;\n";<br />    foreach( $categories as $category ) { echo "&lt;div class=&#039;sp-sidebar-item-box-head&#039;&gt;&lt;a href=&#039;../?category=$category[id]&#039;&gt;$category[name]&lt;/a&gt;&lt;/div&gt;"; }<br />    echo "&lt;/div&gt;\n";<br />echo "&lt;/div&gt;";<br />}</pre>
-<p>Wird die Funktion im Archive Loop genutzt müssen die Variablen nach jedem Auafruf gelöscht werden!</p>
+<p>Wird die Funktion im Archive Loop genutzt müssen die Variablen nach jedem Aufruf mit Hilfe von<p>
+ <pre>unset($categories)</pre>
+ <p>gelöscht werden!</p>
 <p>Es kommt aber noch eine Funktion bzw. sogar eine neue Klasse um diese Taxonomie Abrufe zu automatisieren.</p>
 <p>Erfindet zwar nicht das Rad neu, ist aber extrem effizient!</p>
