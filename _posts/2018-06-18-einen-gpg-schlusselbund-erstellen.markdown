@@ -18,7 +18,7 @@ Besonders wichtig ist es, folgende Sachen zu wissen
 
 Nach Generierung der Schlüssel sollte man also gleich ein Widerrufszertifikat erstellen – für den Fall das Sie Ihren privaten Schlüssel verlieren oder das Passwort vergessen. Das werden wir im Anschluss an die Generierung der Schlüssel erledigen. Wie Sie Ihren Schlüsselbund verwalten, werde ich in einem eigenen Artikel zeigen.
 
-Schlüsselpaar generieren
+<h2>Schlüsselpaar generieren</h2>
 
 <pre>user@machine:~# gpg --gen-key</pre> 
 
@@ -96,7 +96,7 @@ sub   2048R/3F3714BD 2018-03-12 [verfällt: 2018-03-19]</pre>
 
 Die Zeile, die mit sub beginnt ist ein Subkey des eben erstellten privaten Schlüssel. Dieser wird automatisch mit generiert. Damit haben Sie Ihren Schlüsselbund erfolgreich erstellt.
 
-Schlüssel ID
+<h2>Schlüssel ID</h2>
 
 Diese kann auf verschiedene Weise dargestellt werden. Um die KeyID Ihres Schlüssels zu erfahren können Sie den Befehl –list-keys mit der assoziierten Email als Parameter aufrufen.
 
@@ -109,7 +109,7 @@ Der lange hexadezimale String in Zeile 2 ist der sogenannte Fingerabdruck des Sc
 
 <pre>71E3EEFA</pre>
 
-Schlüssel exportieren
+<h2>Schlüssel exportieren</h2>
 
 Mit dem Befehl
 
@@ -120,7 +120,7 @@ gpg --armor --export-secret-key KeyID >> dateiname.asc
 
 können Sie Ihren öffentlichen und Ihren privaten Schlüssel in eine Datei exportieren. Achten Sie auf die doppelten Pfeile beim 2. Aufruf! Der Parameter –armor bewirkt die Ausgabe im bekannten ASCII Format. Mit diesen exportierten Sicherungen können Sie Ihren Schlüsselbund auf weitere Systeme portieren.
 
-Schlüssel importieren
+<h2>Schlüssel importieren</h2>
 
 Um einen exportierten privaten Schlüssel auf einem anderen System zu importieren rufen Sie
 
@@ -130,7 +130,7 @@ gpg --allow-secret-key-import --import dateiname.asc
 
 und importieren so die Datei. Auf diese Weise können Sie auch öffentliche Schlüssel Ihrer Kontakte importieren.
 
-Widerrufszertifikat erstellen
+<h2>Widerrufszertifikat erstellen</h2>
 
 Nun erstellen wir das zu Beginn erwähnte Widerrufszertifikat. Dazu benötigen wir wieder die KeyID des betreffenden Schlüssels.
 
