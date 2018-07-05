@@ -53,7 +53,7 @@ HAVING type LIKE ('%type_%')</pre>
  <pre>unset($categories)</pre>
  <p>gelöscht werden!</p>
  <pre>if( $the_tags = $this->terms( 'tag', $item['id'] ) ) {
-    foreach( $the_tags as $tag ) { $tags[] = "<a href'../?tag=$tag[id]'>$tag[name]</a>"; }
+    foreach( $the_tags as $tag ) { $tags[] = "&lt;a href=&#039;../?category=$category[id]&#039;&gt;$category[name]&lt;/a&gt;"; }
     echo "Tags: " . implode(', ', $tags ) . " ";
     unset($the_tags, $tags);
 }</pre>
