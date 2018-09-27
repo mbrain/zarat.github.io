@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-Mein neuer Github Blog.
+Willkommen zu meinem neuen Github Blog. Nachrichten an mich könen Sie mit folgendem Key verschlüsseln.
 
 <code>-----BEGIN PGP PUBLIC KEY BLOCK-----
 
