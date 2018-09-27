@@ -9,10 +9,7 @@ layout: default
     <div class="sp-content-item-head-secondary">
       {{ page.date | date: "%B" }}
       {{ page.date | date: "%d" }},
-      {{ page.date | date: "%Y" }} - 
-      {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
-            <a href="/tag/{{ tag_name }}">{{ tag_name }}</a> 
-      {% endfor %}    
+      {{ page.date | date: "%Y" }}    
     </div>
 
     <div class="sp-content-item-body">
