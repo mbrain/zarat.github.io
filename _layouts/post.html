@@ -10,7 +10,6 @@ layout: default
       {{ page.date | date: "%B" }}
       {{ page.date | date: "%d" }},
       {{ page.date | date: "%Y" }} - 
-      <a target="_blank" href="//github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/edit/master/{{ page.path }}" target="_blank">edit</a> - 
       {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}
             <a href="/tag/{{ tag_name }}">{{ tag_name }}</a> 
       {% endfor %}    
