@@ -6,6 +6,7 @@ permalink: /about/
 Willkommen zu meinem neuen Github Blog. Nachrichten an mich könen Sie mit folgendem Key verschlüsseln.
 
 <pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
 mQINBFrTy1UBEAC4f6NO3cDH5YIeaEGPv4e1vEjDBEvGjXaEz+h2xUaPaZGbc4jX
 xNCdKR4X9ybjE5d8r8jzHfpufhcrGCkxwf45a60el+ycKdja2mi64gTjrhpgTeKI
 6FUGIrxGndnqxPaV3HF/3dJ/rds7LUC9ciIHf/FN6iW1zHTk4JaXwVL4tzLk6z4T
