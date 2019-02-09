@@ -141,4 +141,8 @@ gpg --gen-revoke KeyID > KeyID.rev.asc
 Heben Sie dieses Widerrufszertifikat so sorgsam wie Ihren privaten Schlüssel – aber an einem anderen Ort – auf. Ihr Schlüsselbund ist damit fertig. Ihren öffentlichen Schlüssel können Sie auf verschiedene verteilen wie Sie möchten.
 Schlüssel veröffentlichen
 
-Keyserver sind für jeden frei zugängliche Server, auf denen öffentliche Schlüssel abgelegt werden können. Außerdem kann dort jede Person nach öffentlichen Schlüsseln von anderen Personen suchen und diese in den eigenen Schlüsselbund importieren. Das erleichtert die Suche nach öffentlichen Schlüsseln enorm. Diese weltweit verteilten Keyserver synchronisieren sich untereinander und werden von einer großen Zahl von Institutionen und Privatpersonen auf der ganzen Welt betrieben.
+Keyserver sind für jeden frei zugängliche Server, auf denen öffentliche Schlüssel abgelegt werden können. Außerdem kann dort jede Person nach öffentlichen Schlüsseln von anderen Personen suchen und diese in den eigenen Schlüsselbund importieren. Das erleichtert die Suche nach öffentlichen Schlüsseln enorm. Diese weltweit verteilten Keyserver synchronisieren sich untereinander und werden von einer großen Zahl von Institutionen und Privatpersonen auf der ganzen Welt betrieben.Um Ihren Public key zu veröffentlichen, senden Sie ihn an einem Keyserver.
+
+<pre>
+gpg --keyserver keyserver.ubuntu.com --send-key KeyID
+</pre>
