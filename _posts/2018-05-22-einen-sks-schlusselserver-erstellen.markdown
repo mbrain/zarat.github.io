@@ -4,7 +4,7 @@ title: Einen SKS Schlüsselserver installieren
 author: Manuel Zarat
 category: tutorials
 tags: verschlüsselung
-permalink: /blog/einen-gpg-schlusselbund-erstellen
+permalink: /blog/einen-sks-schlusselserver-erstellen
 ---
 
 Der SKS Keyserver lässt sich bequem über den Paketmanager installieren
