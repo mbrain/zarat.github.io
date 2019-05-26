@@ -3,6 +3,25 @@
   var postsTitle = [{% for post in site.posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
 
+<script type="text/javascript">
+  var randomIndexUsed = [];
+  var counter = 0;
+  var numberOfPosts = 5;
+  while (counter < numberOfPosts) {
+    var randomIndex;
+    var postURL;
+    var postTitle;
+    randomIndex = Math.floor(Math.random() * postsURL.length);
+    if (randomIndexUsed.indexOf(randomIndex) == "-1") {
+      postURL = postsURL[randomIndex];
+      postTitle = postsTitle[randomIndex];
+      document.write('<div class="sp-sidebar-item-head"><a href="' + postURL + '">' + postTitle + '</a></div>');
+      randomIndexUsed.push(randomIndex);
+      counter++;
+    }
+  }
+</script>
+
 <!-- HTML elements for search -->
     <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
@@ -22,22 +41,3 @@
         exclude: ['Welcome']
       })
     </script>
-
-<script type="text/javascript">
-  var randomIndexUsed = [];
-  var counter = 0;
-  var numberOfPosts = 5;
-  while (counter < numberOfPosts) {
-    var randomIndex;
-    var postURL;
-    var postTitle;
-    randomIndex = Math.floor(Math.random() * postsURL.length);
-    if (randomIndexUsed.indexOf(randomIndex) == "-1") {
-      postURL = postsURL[randomIndex];
-      postTitle = postsTitle[randomIndex];
-      document.write('<div class="sp-sidebar-item-head"><a href="' + postURL + '">' + postTitle + '</a></div>');
-      randomIndexUsed.push(randomIndex);
-      counter++;
-    }
-  }
-</script>
