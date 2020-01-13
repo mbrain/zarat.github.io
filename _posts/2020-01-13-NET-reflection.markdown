@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Net Reflection"
+title:  "Why i love Microsofts .net reflection feature"
 description: 
 category: test
 permalink: /blog/net-reflection
