@@ -7,7 +7,7 @@ permalink: /blog/net-reflection
 published: true
 ---
 
-I love really Microsoft's .NET reflection feature and I encourage everyone to try it out. Lets try to build a pluggable program using this feature. First i create an interface to communicate between the host application and the plugin. 
+I love really Microsoft's .NET reflection feature and I encourage everyone to try it out. [ScriptStack](https://github.com/zarat/scriptstack) is basically build on this feature. Lets try to build a pluggable program using this feature. First i create an interface to communicate between the host application and the plugin. 
 <!--excerpt_separator-->
 In this interface are functions where the plugin exposes its functions and a function to call a method.
 
